@@ -1,0 +1,12 @@
+{
+  "name": "yahtzee",
+  "version": "1.0.0",
+  "description": "A multiplayer Yahtzee web app",
+  "main": "./server/src/main.js",
+  "scripts": {
+    "start": "node ./server/src/main.js"
+  },
+  "author": "Softwire Work Experience",
+  "license": "ISC",
+  "type": "module"
+}
