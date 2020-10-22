@@ -5,7 +5,8 @@
   "main": "./server/src/main.js",
   "scripts": {
     "start": "node ./server/src/main.js",
-    "test": "ava"
+    "test": "ava",
+    "watch": "nodemon ./server/src/main.js"
   },
   "author": "Softwire Work Experience",
   "license": "ISC",
@@ -14,6 +15,7 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
-    "ava": "^3.13.0"
+    "ava": "^3.13.0",
+    "nodemon": "^2.0.6"
   }
 }
