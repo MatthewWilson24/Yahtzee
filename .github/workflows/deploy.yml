@@ -16,10 +16,10 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Install git 
-        run: apt-get install -y git
+        run: sudo apt-get install -y git
 
       - name: install heroku cli
-        run: snap install --classic heroku
+        run: sudo snap install --classic heroku
 
       - name: add heroku git remote
         run: heroku git:remote -a softwire-yahtzee
