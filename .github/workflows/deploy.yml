@@ -17,6 +17,9 @@ jobs:
 
       - name: Install git 
         run: sudo apt-get install -y git
+      
+      - name: Set a git username
+        run: git config --global user.name "CI"
 
       - name: install heroku cli
         run: sudo snap install --classic heroku
