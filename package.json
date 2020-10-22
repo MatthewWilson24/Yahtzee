@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node ./server/src/main.js",
     "test": "ava",
-    "watch": "nodemon ./server/src/main.js"
+    "watch": "nodemon ./server/src/main.js",
+    "clean": "bash -c 'rm -rf ./node_modules' && npm install"
   },
   "author": "Softwire Work Experience",
   "license": "ISC",
