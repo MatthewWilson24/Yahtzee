@@ -1,3 +1,4 @@
-export const testEndpoint = (req, res) => {
-    res.send("Hello World!")
+export const testEndpoint = (request) => {
+    console.log(`Request: ${request}`)
+    return "Hello World!"
 }

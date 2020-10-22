@@ -1,10 +1,7 @@
-import { Router } from 'express'
+import { ApiRouterBuilder } from './apiRouterBuilder.js'
 import { testEndpoint } from './endpoints/testEndpoint.js'
 
-/*
-Sets the endpoints for our API.
-*/
+const routerBuilder = new ApiRouterBuilder()
+routerBuilder.addGetEndpoint('/', testEndpoint)
 
-export const apiRouter = Router()
-
-apiRouter.get('/', testEndpoint)
+export const apiRouter = routerBuilder.router
