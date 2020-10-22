@@ -1,4 +1,8 @@
-const apiUrl = `${window.location.protocol}://${window.location.hostname}:${window.location.port}/api`
+const protocol = window.location.protocol
+const hostname = window.location.hostname
+const port = protocol.startsWith('https') ? "443" : window.location.port
+const apiUrl = `${protocol}//${hostname}:${port}/api`
+console.log(apiUrl)
 
 class ApiMessageSender {
     async get(path) {
