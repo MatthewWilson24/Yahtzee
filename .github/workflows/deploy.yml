@@ -22,11 +22,10 @@ jobs:
       - name: Install heroku cli
         run: sudo snap install --classic heroku
 
-      - name: Open repository directory
-        run: cd Yahtzee
-
       - name: Add heroku git remote
         run: git push https://heroku:$HEROKU_API_KEY@git.heroku.com/softwire-yahtzee.git HEAD:main
+        working-directory: ./Yahtzee
 
       - name: Deploy to heroku
         run: git push heroku main
+        working-directory: ./Yahtzee
