@@ -13,10 +13,11 @@ jobs:
       HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
 
     steps:
-      - uses: actions/checkout@v2
-
       - name: Install git 
         run: sudo apt-get install -y git
+      
+      - name: Clone main branch from repo
+        run: git clone --single-branch https://github.com/$GITHUB_REPOSITORY
 
       - name: Install heroku cli
         run: sudo snap install --classic heroku
