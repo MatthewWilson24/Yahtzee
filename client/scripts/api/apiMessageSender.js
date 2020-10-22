@@ -1,4 +1,4 @@
-const apiUrl = `http://${window.location.hostname}:${window.location.port}/api`
+const apiUrl = `${window.location.protocol}://${window.location.hostname}:${window.location.port}/api`
 
 class ApiMessageSender {
     async get(path) {
