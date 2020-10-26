@@ -1,7 +1,7 @@
-import { ApiRouterBuilder } from './apiRouterBuilder.js'
-import { testEndpoint } from './endpoints/testEndpoint.js'
+import { testApiEndpoint } from './endpoints/testApiEndpoint.js'
+import express from 'express'
 
-const routerBuilder = new ApiRouterBuilder()
-routerBuilder.addGetEndpoint('/', testEndpoint)
+export const apiRouter = express.Router()
+apiRouter.use(express.json())
 
-export const apiRouter = routerBuilder.router
+apiRouter.get('/', testApiEndpoint)
