@@ -24,6 +24,13 @@ const getClientDirectory = () => {
     return path.join(currentModuleDirectory, '../../client')
 }
 
+// Strips ".html" from all urls
+app.use('/', (req, res, next) => {
+    req.url = req.url.replace(/\.html$/, '')
+    console.log(req.url)
+    next()
+})
+
 // All files in the client directory available at "<siteurl>/<filename>"
 app.use('/', express.static(getClientDirectory(), { extensions: ['html'] }))
 
