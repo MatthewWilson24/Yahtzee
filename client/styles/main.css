@@ -1,0 +1,19 @@
+/*
+    This file contains default styles that are imported into every page.
+    This ensures we have consistent styling across the site and can reuse style rules.
+    
+    This style sheet should define things such as:
+        - Font family
+        - Default font size
+        - Primary and secondary text colours
+        - Large, medium and small font sizes (use 'rem' instead of 'px' for accessibility)
+        - Default styling for buttons (bear in mind we may also need to apply this to <a> elements)
+        - Default styling for text inputs
+        - Default styling for page headings
+        - A "wrapper" class that can be used to set the page width and add horizontal padding
+          (see https://css-tricks.com/best-way-implement-wrapper-css/).
+*/
+
+:root {
+    /* Default styles that apply to all elements */
+}
