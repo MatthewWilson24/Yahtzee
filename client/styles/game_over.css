@@ -1,16 +1,20 @@
+@import './main.css';
 
-h1{
+h1 {
     font-family: Arial, Helvetica, sans-serif;
     color: blue;
     margin: 20px;
 }
-p{
+
+p {
     margin: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
-button{
+
+button {
     margin: 20px;
 }
-a{
+
+a {
     margin: 20px;
 }
