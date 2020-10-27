@@ -1,4 +1,4 @@
-export const topCategories = [
+export const topHalfCategories = [
     "ones",
     "twos",
     "threes",
@@ -7,7 +7,7 @@ export const topCategories = [
     "sixes"
 ]
 
-export const bottomCategories = [
+export const bottomHalfCategories = [
     "threeOfAKind",
     "fourOfAKind",
     "fullHouse",
@@ -17,7 +17,20 @@ export const bottomCategories = [
     "chance"
 ]
 
-export const allCategories = [
+export const scoringCategories = [
     ...topHalfCategories,
     ...bottomHalfCategories
+]
+
+export const computedCategories = [
+    "topHalfSum",
+    "bonus",
+    "topHalfTotal",
+    "bottomHalfTotal",
+    "overallTotal"
+]
+
+export const allCategories = [
+    ...scoringCategories,
+    ...computedCategories
 ]
