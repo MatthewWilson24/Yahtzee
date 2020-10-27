@@ -13,7 +13,46 @@
         - A "wrapper" class that can be used to set the page width and add horizontal padding
           (see https://css-tricks.com/best-way-implement-wrapper-css/).
 */
+/* Default styles that apply to all elements */
 
 :root {
-    /* Default styles that apply to all elements */
+    font-family: Tahoma, Geneva, sans-serif;
+    font-style: normal;
+    font-variant: normal;
+}
+
+html, body {
+    height: 100%;
+    background: #FFEFBA;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+} 
+/*.title_container
+{
+    padding-bottom: 25px;
+    border: 5px solid wheat;
+    background: beige;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+*/
+.title_container h1
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+    font-family:  Arial, Helvetica, sans-serif;
+    font-variant: small-caps;
+}
+.content_container {
+    
 }
