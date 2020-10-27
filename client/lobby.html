@@ -13,13 +13,18 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Lobby</title>
+    <title style= text-align:center;>Lobby</title>
     <link rel="stylesheet" href="styles/lobby.css">
 </head>
 
 <body>
-    <h1 class="header">Lobby</h1>
-    <h2 class= code>Code: XXXX </h2>
+    <div class="title_container">
+        <h1><img style= "width:6%; height:6%;"  src ="https://gilkalai.files.wordpress.com/2017/09/dice.png?w=640">Yahtzee <img style= "width:6%; height:6%;"  src ="https://gilkalai.files.wordpress.com/2017/09/dice.png?w=640"></h1>
+        
+        
+    <div>
+    <h1 class="header" style= text-align:center;>Lobby</h1>
+    <h2 class= code style= text-align:center;>Code: XXXX </h2>
     <table class="Players center">
         <thead>
             <th>Player Name</th>
@@ -46,12 +51,9 @@
                 </td>
             </tr>
         </tbody>
-    </table>
-    <div class="container">
-        <div class="vertical-center">
-            <button>Start</button>
-        </div>
-    </div>
+    </table> <br><br>
+    <button class="main-button">Start</button>
+            
     
 
     <script src="scripts/lobby.js" type="module"></script>
