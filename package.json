@@ -3,9 +3,25 @@
   "version": "1.0.0",
   "description": "A multiplayer Yahtzee web app",
   "main": "./server/src/main.js",
+  "jest": {
+    "restoreMocks": true,
+    "verbose": true
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
+  },
   "scripts": {
     "start": "node ./server/src/main.js",
-    "test": "ava",
+    "test": "jest",
     "watch": "nodemon ./server/src/main.js",
     "clean": "bash -c 'rm -rf ./node_modules' && npm install"
   },
@@ -13,10 +29,12 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "sinon": "^9.2.0"
   },
   "devDependencies": {
-    "ava": "^3.13.0",
+    "@babel/preset-env": "^7.12.1",
+    "jest": "^26.6.1",
     "nodemon": "^2.0.6"
   }
 }
