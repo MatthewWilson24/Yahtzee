@@ -1,4 +1,5 @@
-import { Scorecard } from "./scorecard"
+import { Scorecard } from './scorecard.js'
+import { possibleScoreCalculator } from './possibleScoreCalculator.js'
 
 export class Game {
     constructor(code, players) {
@@ -36,6 +37,10 @@ export class Game {
     }
 
     scoreInCategory(category) {
+
+    }
+
+    gameIsOver() {
 
     }
 }

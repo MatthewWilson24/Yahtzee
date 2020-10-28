@@ -40,12 +40,6 @@ describe.skip('Game tests', () => {
         })
     })
 
-    describe('CanKeep', () => {
-        test('If rollsRemaining is 3, canKeep is false', () => {
-            
-        })
-    })
-
     describe('canRoll', () => {
         test('If rollsRemaining is greater than 0, canRoll is true', () => {
             const game = new Game()
