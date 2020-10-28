@@ -1,5 +1,5 @@
 class DiceCategoryChecker {
-    countDiceValues(dice) {
+    countDiceFrequency(dice) {
         let counts = [0, 0, 0, 0, 0, 0]
         for (let die of dice) {
             counts[die - 1] += 1
@@ -7,6 +7,7 @@ class DiceCategoryChecker {
         return counts
     }
 
+    // Filters out duplicates, sorts and returns array of differences between adjacent elements
     calculateDifferences(dice) {
         dice = [...new Set(dice)]
         dice.sort()
@@ -18,15 +19,15 @@ class DiceCategoryChecker {
     }
 
     isThreeOfAKind(dice) {
-        return Math.max(...this.countDiceValues(dice)) >= 3
+        return Math.max(...this.countDiceFrequency(dice)) >= 3
     }
 
     isFourOfAKind(dice) {
-        return Math.max(...this.countDiceValues(dice)) >= 4
+        return Math.max(...this.countDiceFrequency(dice)) >= 4
     }
 
     isFullHouse(dice) {
-        let values = this.countDiceValues(dice)
+        let values = this.countDiceFrequency(dice)
         return (values.includes(3) && values.includes(2)) || values.includes(5)
     }
 
@@ -47,7 +48,7 @@ class DiceCategoryChecker {
     }
 
     isYahtzee(dice) {
-        return Math.max(...this.countDiceValues(dice)) >= 5
+        return Math.max(...this.countDiceFrequency(dice)) >= 5
     }
 }
 
