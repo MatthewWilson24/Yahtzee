@@ -6,6 +6,36 @@ export class Game {
         this.players = undefined
         this.currentPlayer = undefined
         this.rollsRemaining = undefined
+        this.currentDice = undefined
+        this.diceKept = undefined
         this.scorecards = undefined
+    }
+
+    canKeep() {
+
+    }
+
+    keepDice(diceToKeep) {
+
+    }
+
+    canRoll() {
+
+    }
+
+    rollDice() {
+
+    }
+
+    canScore() {
+
+    }
+
+    possibleScores() {
+
+    }
+
+    scoreInCategory(category) {
+
     }
 }

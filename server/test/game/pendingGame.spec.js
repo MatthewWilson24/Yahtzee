@@ -1,6 +1,6 @@
 import { PendingGame } from '../../src/game/pendingGame.js'
 
-describe('PendingGame tests', () => {
+describe.skip('PendingGame tests', () => {
     test('Constructor should set code property', () => {
         const pg = new PendingGame('CODE')
         expect(pg.code).toBe('CODE')

@@ -1,5 +1,7 @@
+import { diceScoreCalculator } from './diceScoreCalculator.js'
+
 class PossibleScoreCalculator {
-    allPossibleScores() {
+    allPossibleScores(scorecard, dice) {
         
     }
 }
