@@ -27,7 +27,6 @@ const getClientDirectory = () => {
 // Strips ".html" from all urls
 app.use('/', (req, res, next) => {
     req.url = req.url.replace(/\.html$/, '')
-    console.log(req.url)
     next()
 })
 

@@ -12,19 +12,24 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Join Game</title>
+    <title id = "join">Join Game</title>
     <link rel="stylesheet" href="styles/join_game.css">
 </head>
 
 <body>
+    <div class="title_container">
+        <h1><img style= "width:3%; height:3%;"  src ="https://gilkalai.files.wordpress.com/2017/09/dice.png?w=640">Yahtzee <img style= "width:3%; height:3%;"  src ="https://gilkalai.files.wordpress.com/2017/09/dice.png?w=640"></h1>
+    </div>
     <h1> Join Game </h1>
     <form>
-        <label>Game code:</label>
-        <input type="text" id="gamecode">
-        <input type="submit" value="Enter Game"></input>
+        <input type="text" id="gamecode" style= "width:9.5% ; height:100%;"  placeholder="Enter Code">
+        <br>
+        <input class= "entry" style= "width:10% ; height:10%;" type="submit" value="Enter"></input>
     </form>
     
     <script src="scripts/join_game.js" type="module"></script>
 </body>
+
+<div id="background"></div>
 
 </html>

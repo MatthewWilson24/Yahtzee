@@ -1,3 +1,8 @@
+import { generateGameCode } from '../../game/gameCode.js'
+import { PendingGame } from '../../game/pendingGame.js'
+import { pendingGameStore } from '../../store/pendingGameStore.js'
+import { buildPath } from './pathBuilder.js'
+
 /*
     This controller should:
         - Call generateGameCode to get a new game code
