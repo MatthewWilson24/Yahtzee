@@ -5,3 +5,5 @@ class PossibleScoreCalculator {
         
     }
 }
+
+export const possibleScoreCalculator = new PossibleScoreCalculator()

@@ -1,3 +1,6 @@
+import { pendingGameStore } from '../../store/pendingGameStore.js'
+import { buildPath } from './pathBuilder.js'
+
 /*
     Assume that the body of the request has form:
         { game: code }

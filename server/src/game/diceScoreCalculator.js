@@ -1,4 +1,4 @@
-import { diceCategoryChecker } from "./diceCategoryChecker"
+import { diceCategoryChecker } from "./diceCategoryChecker.js"
 
 class DiceScoreCalculator {
     getScoreForCategory(dice, category) {
