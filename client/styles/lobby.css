@@ -7,7 +7,6 @@ h1, .code{
     padding: 20px;
     background-color: beige;
 }
-
 .Players, .code{
     padding: 20px;
     font-family: Arial, Helvetica, sans-serif;
@@ -46,9 +45,7 @@ button{
     padding-left: 20px;
     padding-right: 20px;
     font-size: large;
-
 }
-
 .header {
     padding: 60px;
     text-align: center;
@@ -56,14 +53,11 @@ button{
     text-color: black;
     font-size: 30px;
 }
-
-
 .container {
   height: 200px;
   position: relative;
   border: 3px solid green;
 }
-
 .vertical-center {
   margin: 50;
   position: absolute;
@@ -71,31 +65,23 @@ button{
   left: 50%;
   
 }
-
 button:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.1);
   }
-
 button {
     transition-duration: 0.1s;
 }
-
 button:hover {
     background-color: #4CAF50;
     color: white;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 */
 /* button:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.1);
 }
-
 button {
   transition-duration: 0.1s;
 }
-
 button:hover {
   background-color: #4CAF50; 
   color: white;
@@ -122,4 +108,3 @@ button:hover {
     <button>Centered Button</button>
   </div>
 </div>
-
