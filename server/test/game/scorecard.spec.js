@@ -1,7 +1,7 @@
 import { scoringCategories } from '../../src/game/categories.js'
 import { Scorecard } from '../../src/game/scorecard.js'
 
-describe.skip('Scorecard tests', () => {
+describe('Scorecard tests', () => {
     describe('Constructor', () => {
         test('Constructor adds all scoringCategories as keys in scores object', () => {
             const scorecard = new Scorecard()
