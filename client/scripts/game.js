@@ -1,16 +1,21 @@
-var cube = document.getElementById('cube');
+import { apiMessageSender } from './api/apiMessageSender.js'
 
-var min = 1;
-var max = 24;
-
-cube.onclick = function() {
-  var xRand = getRandom(max, min);
-  var yRand = getRandom(max, min);
-    
-  cube.style.webkitTransform = 'rotateX('+xRand+'deg) rotateY('+yRand+'deg)';
-  cube.style.transform = 'rotateX('+xRand+'deg) rotateY('+yRand+'deg)';
+const postMove = async (move) => {
+    await apiMessageSender.post('/move', move)
 }
 
-function getRandom(max, min) {
-  return (Math.floor(Math.random() * (max-min)) + min) * 90;
+const receiveGameState = async (code) => {
+    return await apiMessageSender.post('/game_state', {
+        game: code,
+    })
 }
+
+const pollGameState = (code) => {
+    setTimeout(() => {
+        const gameState = await receiveGameState(code)
+        updatePageWithNewState(gameState)
+        pollGameState(code)
+    }, 500)
+}
+
+const updatePageWithNewState = (state) => {}

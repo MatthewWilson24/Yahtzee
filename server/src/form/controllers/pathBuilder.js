@@ -1,4 +1,14 @@
 /*
+    The endpoint should take a path (e.g. /path) and a js object containing query parameters
+    (e.g. {
+        param1: val1,
+        param2: val2
+    })
+    and produce a string of format: /path?param1=val1&param2=val2
+
+
+    Examples:
+
     path: "/enter_name"
     queryParams: { game: code, player: name }
 
@@ -9,11 +19,6 @@
     queryParams: {}
 
     output: "/index"
-
-
-    Object.keys()
-    Object.values()
-    Object.entries()
 */
 export const buildPath = (path, queryParams) => {
     path = path +'?'
@@ -22,11 +27,4 @@ export const buildPath = (path, queryParams) => {
     });
     path = path.slice(0,-1)
     return path
-/*
-    The endpoint should take a path (e.g. /path) and a js object containing query parameters
-    (e.g. {
-        param1: val1,
-        param2: val2
-    })
-    and produce a string of format: /path?param1=val1&param2=val2
-*/
+}
