@@ -1,7 +1,5 @@
 import { pendingGameStore } from '../../store/pendingGameStore.js'
 import { buildPath } from './pathBuilder.js'
-var express = require('express')
-var app = express()
 /*
     Assume that the body of the request has form:
         { player: name, game: code }
@@ -16,9 +14,10 @@ export const enterNameController = (req, res) =>
 {
     
     const name = req.body.name
-    const code = req.body.code
 
-    pendingGameStore.add(name)
+    const code = req.body.code
+    
+    pendingGameStore.add(player,name)
 
     const returnUrl = buildPath('/lobby.html', { player: name, game : code})
     res.redirect (returnUrl)

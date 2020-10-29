@@ -87,7 +87,7 @@ button:hover {
   color: white;
 } */
 
-<style>
+
 .container {
   height: 200px;
   position: relative;
@@ -101,10 +101,3 @@ button:hover {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-</style>
-
-<div class="container">
-  <div class="vertical-center">
-    <button>Centered Button</button>
-  </div>
-</div>
