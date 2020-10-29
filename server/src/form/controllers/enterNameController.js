@@ -12,5 +12,5 @@ import { buildPath } from './pathBuilder.js'
         - Log a message to the console to record that a new player was added to this game
 */
 export const enterNameController = (req, res) => {
-
+    
 }
