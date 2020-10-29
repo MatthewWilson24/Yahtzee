@@ -25,6 +25,11 @@ class ApiMessageSender {
 
     async send(path, content) {
         let res = await fetch(`${apiUrl}${path}`, content)
+
+        if (res.status !== 200) {
+            return null
+        }
+
         return res.json()
     }
 }
