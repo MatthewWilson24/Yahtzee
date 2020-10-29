@@ -14,21 +14,16 @@ var app = express()
 */
 export const enterNameController = (req, res) => 
 {
-    /*
-    app.post('/lobby.html', function (req, res)
-    {
-        res.send('name')
-        console.log(`Form submitted: ${JSON.stringify(req.body)}`)
-    }
-    */
-
+    
     const name = req.body.name
     const code = req.body.code
 
-    const returnUrl = buildPath('/index.html', { player: name, game : code})
+    pendingGameStore.add(name)
+
+    const returnUrl = buildPath('/lobby.html', { player: name, game : code})
     res.redirect (returnUrl)
 
-    console.log(`Player name entered: ${JSON.stringify(req.body)}`)
+    console.log(`New Player added to game: ${JSON.stringify(req.body)}`)
 
 }
 

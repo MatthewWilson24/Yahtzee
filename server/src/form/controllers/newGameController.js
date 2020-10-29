@@ -13,6 +13,7 @@ import { buildPath } from './pathBuilder.js'
 export const newGameController = (req, res) => {
 
         const code = req.body.code
+        
         pendingGameStore.add(code)
     
         if (pendingGameStore.get(code) === null) {
