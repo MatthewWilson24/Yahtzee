@@ -9,7 +9,7 @@
         }
     
     This endpoint should:
-        - Check whether the request received is valid - if not, return 400 Bad Request (use res.sendStatus())
+        - Check whether the request received is valid - if not, return 400 Bad Request
         - Find the game from the gameStore
         - Call the correct method on the game
         - Return 200 OK
