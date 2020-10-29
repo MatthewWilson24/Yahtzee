@@ -1,6 +1,6 @@
 import { diceCategoryChecker } from '../../src/game/diceCategoryChecker.js'
 
-describe.skip("diceCategoryChecker tests", () => {
+describe("diceCategoryChecker tests", () => {
     describe("isThreeOfAKind", () => {
         test("Returns true if three dice the same", () => {
             const dice = [1, 2, 1, 3, 1]
