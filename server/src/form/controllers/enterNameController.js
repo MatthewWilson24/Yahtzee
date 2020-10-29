@@ -1,6 +1,7 @@
 import { pendingGameStore } from '../../store/pendingGameStore.js'
 import { buildPath } from './pathBuilder.js'
-var express = require('express')
+import express from 'express'
+
 var app = express()
 /*
     Assume that the body of the request has form:
