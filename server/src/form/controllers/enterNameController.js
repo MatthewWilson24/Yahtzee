@@ -26,4 +26,3 @@ export const enterNameController = (req, res) =>
     console.log(`New Player added to game: ${JSON.stringify(req.body)}`)
 
 }
-

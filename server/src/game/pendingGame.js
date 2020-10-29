@@ -1,10 +1,10 @@
 export class PendingGame {
     constructor(code) {
-        this.code = undefined
-        this.players = undefined
+        this.code = code
+        this.players = []
     }
 
     addPlayer(name) {
-
+        this.players.push(name)
     }
 }

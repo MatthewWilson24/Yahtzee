@@ -43,4 +43,8 @@ export class Game {
     gameIsOver() {
 
     }
+
+    toJSON() {
+        
+    }
 }

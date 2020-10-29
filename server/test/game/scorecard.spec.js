@@ -1,7 +1,7 @@
 import { scoringCategories } from '../../src/game/categories.js'
 import { Scorecard } from '../../src/game/scorecard.js'
 
-describe.skip('Scorecard tests', () => {
+describe('Scorecard tests', () => {
     describe('Constructor', () => {
         test('Constructor adds all scoringCategories as keys in scores object', () => {
             const scorecard = new Scorecard()
@@ -25,9 +25,9 @@ describe.skip('Scorecard tests', () => {
                 "threes": 12,
                 "fours": 16,
                 "fives": 20,
-                "sixes": 24
+                "sixes": null
             }
-            expect(scorecard.topHalfSum()).toBe(84)
+            expect(scorecard.topHalfSum()).toBe(60)
         })
     })
 
@@ -70,9 +70,9 @@ describe.skip('Scorecard tests', () => {
                 "lowStraight": 30,
                 "highStraight": 40,
                 "yahtzee": 50,
-                "chance": 25
+                "chance": null
             }
-            expect(scorecard.topHalfSum()).toBe(220)
+            expect(scorecard.bottomHalfTotal()).toBe(195)
         })
     })
 
