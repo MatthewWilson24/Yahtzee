@@ -1,5 +1,11 @@
 import { pendingGameStore } from '../../store/pendingGameStore.js'
 import { buildPath } from './pathBuilder.js'
+<<<<<<< HEAD
+=======
+import express from 'express'
+
+var app = express()
+>>>>>>> 99c966266a6786231bb216f16355fdd188733163
 /*
     Assume that the body of the request has form:
         { player: name, game: code }
