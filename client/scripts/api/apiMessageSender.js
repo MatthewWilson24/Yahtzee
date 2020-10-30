@@ -28,6 +28,7 @@ class ApiMessageSender {
 
         if (res.status !== 200) {
             return null
+            throw new Error('No response received')
         }
 
         return res.json()

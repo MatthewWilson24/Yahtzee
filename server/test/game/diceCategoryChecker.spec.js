@@ -1,14 +1,8 @@
 import { diceCategoryChecker } from '../../src/game/diceCategoryChecker.js'
 
-<<<<<<< HEAD
 describe("diceCategoryChecker tests", () => {
     describe("isThreeOfAKind", () => {
         test("Returns true if three dice the same", () => {
-=======
-describe('diceCategoryChecker tests', () => {
-    describe('isThreeOfAKind', () => {
-        test('Returns true if three dice the same', () => {
->>>>>>> dfbe7a8cb85e429c79df9c939735d57483706800
             const dice = [1, 2, 1, 3, 1]
             expect(diceCategoryChecker.isThreeOfAKind(dice)).toBe(true)
         })

@@ -22,9 +22,10 @@
 */
 export const buildPath = (path, queryParams) => {
     path = path +'?'
-    queryParams.entries().forEach(element => {
+    Object.entries(queryParams).forEach(element => {
         path = path + element[0] + '=' + element[1] + "&"
     });
     path = path.slice(0,-1)
+    
     return path
 }

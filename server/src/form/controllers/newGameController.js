@@ -12,19 +12,14 @@ import { buildPath } from './pathBuilder.js'
 */
 export const newGameController = (req, res) => {
 
-        const code = req.body.code
-        
+        const code = generateGameCode()
+
         pendingGameStore.add(code)
+        const returnUrl = buildPath('/enter_name.html', { game: code }) 
     
-        if (pendingGameStore.get(code) === null) {
-            res.sendStatus(404)
-        }
-        else {
-            const returnUrl = buildPath('/enter_name.html', { game: code })
+        res.redirect(returnUrl)
     
-            res.redirect(returnUrl)
-    
-            console.log(`New Game created: ${JSON.stringify(req.body)}`)
-        }
+        console.log(`New Game created: ${JSON.stringify(req.body)}`)
+        
     }
 

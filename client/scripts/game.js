@@ -36,25 +36,3 @@ const updatePageWithNewState = (state) => {
     updateScorecards(state.scorecards)
     //
 const updateScorecards = (scorecards) => {}
-
-const updatePageWithNewState = (state) => {
-    updateScorecards(state.scorecards)
-    //
-const updateScorecards = (scorecards) => {}
-
-const updatePageWithNewState = (state) => {
-    updateScorecards(state.scorecards)
-    //
-const updateScorecards = (scorecards) => {}
-
-const updatePageWithNewState = (state) => {
-    updateScorecards(state.scorecards)
-    //
-const updateScorecards = (scorecards) => {}
-
-const updatePageWithNewState = (state) => {
-    updateScorecards(state.scorecards)
-    //
-    //
-    //
-}
