@@ -17,11 +17,13 @@ import { gameStore } from '../../store/gameStore.js'
 */
 export const moveEndpoint = (req, res) => {
     console.log(`Move request: ${JSON.stringify(req.body)}`)
+
+    let currGame
     try {
-        currGame = gameStore.get(req.code)
+        const currGame = gameStore.get(req.code)
     } catch (err) {
         // Ignore any errors thrown by gameStore if code is missing
-        currGame = null
+        const currGame = null
     }
 
     // Return 400 if game object is null or undefined

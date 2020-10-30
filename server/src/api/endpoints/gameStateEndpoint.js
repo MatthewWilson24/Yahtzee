@@ -22,6 +22,8 @@ export const gameStateEndpoint = (req, res) => {
 
     /*
     console.log(`Game state request: ${JSON.stringify(req.body)}`)
+
+    let currGame
     try {
         currGame = gameStore.get(req.code)
     } catch (err) {
