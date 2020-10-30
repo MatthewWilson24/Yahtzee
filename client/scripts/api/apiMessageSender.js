@@ -27,6 +27,7 @@ class ApiMessageSender {
         let res = await fetch(`${apiUrl}${path}`, content)
 
         if (res.status !== 200) {
+            return null
             throw new Error('No response received')
         }
 

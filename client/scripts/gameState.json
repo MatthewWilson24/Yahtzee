@@ -1,0 +1,7 @@
+{
+    "code": "1023",
+    "players": ["name1", "name2"],
+    "currentPlayer": "name1",
+    "currentDice": [1, 2, 3, 4, 5],
+    "diceKept": [1]
+}
