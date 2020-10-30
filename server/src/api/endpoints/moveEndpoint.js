@@ -17,6 +17,7 @@ import { gameStore } from '../../store/gameStore.js'
 */
 export const moveEndpoint = (req, res) => {
     console.log(`Move request: ${JSON.stringify(req.body)}`)
+    let currGame
     try {
         currGame = gameStore.get(req.code)
     } catch (err) {

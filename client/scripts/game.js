@@ -18,4 +18,6 @@ const pollGameState = (code) => {
     }, 500)
 }
 
+window.onload = pollGameState
+
 const updatePageWithNewState = (state) => {}
