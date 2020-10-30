@@ -15,15 +15,16 @@ import { buildPath } from './pathBuilder.js'
         - Redirect the user to game.html with the name and game code as query parameters
         - Log a message to the console to record that the game was started
 */
-export const lobbyController = (req, res) => 
-{
+export const lobbyController = (req, res) => {
     const code = req.body.code
 
     pendingGameStore.remove(code)
-    
-    gameStore.add(code)
-    
-    const returnUrl = buildPath('/game.html', {game : code})
-    console.log(`Game started: ${JSON.stringify(req.body)}`)
 
+    gameStore.add(code)
+
+    const returnUrl = buildPath('/game.html', {
+        game: code,
+        name: req.body.name,
+    })
+    console.log(`Game started: ${JSON.stringify(req.body)}`)
 }

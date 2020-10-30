@@ -6,7 +6,7 @@ export const getPageQueryParameters = () => {
         const keyVal = cur.split('=')
         return {
             ...acc,
-            ...Object.fromEntries([ keyVal ])
+            ...Object.fromEntries([keyVal]),
         }
     }, {})
 }
