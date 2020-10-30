@@ -24,6 +24,7 @@ export const lobbyController = (req, res) =>
     gameStore.add(code)
     
     const returnUrl = buildPath('/game.html', {game : code})
+    res.redirect (returnUrl)
     console.log(`Game started: ${JSON.stringify(req.body)}`)
 
 }
