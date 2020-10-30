@@ -24,37 +24,40 @@
         
     <div>
     <h1 class="header" style= text-align:center;>Lobby</h1>
-    <h2 class= code style= text-align:center;>Code: XXXX </h2>
-    <table class="Players center">
+    <h2 class= code style= text-align:center; id = 'code'>Code: XXXX</h2>
+    <table class="Players center" id = 'table'>
         <thead>
             <th>Player Name</th>
         </thead>
         <tbody>
             <tr>
                 <td>
-                    <span>Player 1:</span>
+                    <span class = "PlayerName"> Player 1:</span>
+                </td>
+                
+            </tr>
+            <tr>
+                <td>
+                    <span class = "PlayerName">Player 2:</span>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <span>Player 2:</span>
+                    <span class = "PlayerName">Player 3:</span>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <span>Player 3:</span>
+                    <span class ="PlayerName">Player 4:</span>
                 </td>
-            </tr>
-            <tr>
-                <td>
-                    <span>Player 4:</span>
-                </td>
+                
             </tr>
         </tbody>
     </table> <br><br>
-    <button class="main-button">Start</button>
-            
     
+    <form method="POST" >
+        <input type = "submit" text= "Start" class="main-button" id = "Start">
+    </form>
 
     <script src="scripts/lobby.js" type="module"></script>
 </body>

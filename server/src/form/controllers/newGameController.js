@@ -14,7 +14,7 @@ export const newGameController = (req, res) => {
 
         const code = generateGameCode()
 
-        pendingGameStore.add(code)
+        pendingGameStore.add(code, new PendingGame(code))
         const returnUrl = buildPath('/enter_name.html', { game: code }) 
     
         res.redirect(returnUrl)
