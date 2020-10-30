@@ -16,8 +16,12 @@ export const enterNameController = (req, res) =>
     const name = req.body.name
 
     const code = req.body.code
+
+    console.log(`name: ${name}`)
+    console.log(`code: ${code}`)
     
-    pendingGameStore.add(player,name)
+    const pendingGame = pendingGameStore.get(code)
+    pendingGame.addPlayer(name)
 
     const returnUrl = buildPath('/lobby.html', { player: name, game : code})
     res.redirect (returnUrl)

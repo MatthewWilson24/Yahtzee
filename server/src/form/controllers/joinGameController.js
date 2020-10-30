@@ -14,11 +14,14 @@ import { buildPath } from './pathBuilder.js'
 export const joinGameController = (req, res) => {
 
     const code = req.body.code
+    
 
     if (pendingGameStore.get(code) === null) {
         res.sendStatus(404)
     }
     else {
+    
+        
         const returnUrl = buildPath('/enter_name.html', { game: code })
         // generates: /lobby.html?game=code
 
