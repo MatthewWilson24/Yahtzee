@@ -1,3 +1,5 @@
+import { Game } from '../../game/game.js'
+import { Scorecard } from '../../game/scorecard.js'
 import { gameStore } from '../../store/gameStore.js'
 
 /*
@@ -10,6 +12,15 @@ import { gameStore } from '../../store/gameStore.js'
         - Otherwise, return the current state of the game as json
 */
 export const gameStateEndpoint = (req, res) => {
+    
+    const game = new Game('0000', ['Player1', 'Player2'])
+    game.rollsRemaining = 2
+    game.currentDice = [1, 2, 3, 4, 5]
+    game.diceKept = []
+
+    res.json(game)
+
+    /*
     console.log(`Game state request: ${JSON.stringify(req.body)}`)
     try {
         currGame = gameStore.get(req.code)
@@ -24,4 +35,5 @@ export const gameStateEndpoint = (req, res) => {
     } else {
         res.json(currGame)
     }
+    */
 }
