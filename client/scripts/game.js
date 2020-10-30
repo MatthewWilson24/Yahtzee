@@ -11,7 +11,7 @@ const receiveGameState = async (code) => {
 }
 
 const pollGameState = (code) => {
-    setTimeout(() => {
+    setTimeout(async () => {
         const gameState = await receiveGameState(code)
         updatePageWithNewState(gameState)
         pollGameState(code)

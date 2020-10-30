@@ -29,14 +29,3 @@ export const buildPath = (path, queryParams) => {
     
     return path
 }
-<<<<<<< HEAD
-/*
-    The endpoint should take a path (e.g. /path) and a js object containing query parameters
-    (e.g. {
-        param1: val1,
-        param2: val2
-    })
-    and produce a string of format: /path?param1=val1&param2=val2
-*/
-=======
->>>>>>> 99c966266a6786231bb216f16355fdd188733163

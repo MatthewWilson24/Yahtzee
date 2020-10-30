@@ -3,18 +3,14 @@ import { scoringCategories } from './categories.js'
 
 class PossibleScoreCalculator {
     allPossibleScores(scorecard, dice) {
-        // let diceCatChecker = {}
-        // for (category of scoringCategories){
-        //     diceCatChecker[key] = value
-            
-        // }
-        // let diceCatChecker = {}
-        // diceCatChecker.key(DiceCategoryChecker.isThreeOfAKind(dice))
+        const availableCategories = scoringCategories.filter((c) => {
+            scorecard[c] !== null
+        })
 
-
-
-        
-        
+        return availableCategories.reduce((possScores, cat) => {
+            possScores[cat] = diceScoreCalculator.getScoreForCategory(dice, cat)
+            return acc
+        }, {})
     }
 }
 
