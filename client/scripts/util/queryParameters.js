@@ -6,11 +6,14 @@ export const getPageQueryParameters = () => {
         const keyVal = cur.split('=')
         return {
             ...acc,
-            ...Object.fromEntries([ keyVal ])
+            ...Object.fromEntries([keyVal]),
         }
     }, {})
 }
+<<<<<<< HEAD
 
 /*
     { game: code }
 */
+=======
+>>>>>>> 89c96d2ae681d99e9d779f206165a2e682b6ab75

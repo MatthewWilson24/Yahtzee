@@ -19,19 +19,20 @@
     <link rel="stylesheet" href="styles/game.css">
 </head>
 
-<body id="wrapper">
+<body>
+    <div id="wrapper">
     <div class="title_container">
         <h1><img style= "width:8%; height:8%;"  src ="https://gilkalai.files.wordpress.com/2017/09/dice.png?w=640">Yahtzee <img style= "width:8%; height:8%;"  src ="https://gilkalai.files.wordpress.com/2017/09/dice.png?w=640"></h1>
         
     </div>
-    <div id="board" style="height: 600px;">
+    <div id="board" style="height: auto; width: auto;">
         <table class="Players center">
             <caption>Score</caption>
 
             <thead>
                 <th></th>
-                <th>Player 1</th>
-                <th>Player 2</th>
+                <!-- <th>Player 1</th>
+                <th>Player 2</th> -->
             </thead>
 
             <tbody>
@@ -39,154 +40,90 @@
                     <td>
                         <span>Ones:</span>
                     </td>
-                    <td>
-                        <button><span>N/A:</span></button>
-                    </td>
-                    <td>
-                        <button><span>N/A:</span></button>
-                    </td>
                 </tr>
                 <tr>
                     <td>
                         <span>Twos:</span>
-                    </td>
-                    <td>
-                        <button><span>N/A:</span></button>
-                    </td>
-                    <td>
-                        <button><span>N/A:</span></button>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <span>Threes:</span>
                     </td>
-                    <td>
-                        <button><span>N/A:</span></button>
-                    </td>
-                    <td>
-                        <button><span>N/A:</span></button>
-                    </td>
                 </tr>
                 <tr>
                     <td>
                         <span>Fours:</span>
-                    </td>
-                    <td>
-                        <button><span>N/A:</span></button>
-                    </td>
-                    <td>
-                        <button><span>N/A:</span></button>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <span>Fives:</span>
                     </td>
-                    <td>
-                        <button><span>N/A:</span></button>
-                    </td>
-                    <td>
-                        <button><span>N/A:</span></button>
-                    </td>
                 </tr>
                 <tr>
                     <td>
                         <span>Sixes:</span>
                     </td>
-                    <td>
-                        <button><span>N/A:</span></button>
-                    </td>
-                    <td>
-                        <button><span>N/A:</span></button>
-                    </td>
                 </tr>
-                <tr>
+                <tr class="separating_line">
                     <td>
                         <span>Sum:</span>
-                    </td>
-                    <td>
-                        <button><span>N/A:</span></button>
-                    </td>
-                    <td>
-                        <button><span>N/A:</span></button>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <span>Bonus:</span>
                     </td>
+                </tr>
+                <tr class="separating_line">
                     <td>
-                        <button><span>N/A:</span></button>
-                    </td>
-                    <td>
-                        <button><span>N/A:</span></button>
+                        <span>Top half:</span>
                     </td>
                 </tr>
-                <tr>
+                <tr class="separating_line">
                     <td>
                         <span>Three of a kind:</span>
-                    </td>
-                    <td>
-                        <button><span>N/A:</span></button>
-                    </td>
-                    <td>
-                        <button><span>N/A:</span></button>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <span>Four of a kind:</span>
                     </td>
-                    <td>
-                        <button><span>N/A:</span></button>
-                    </td>
-                    <td>
-                        <button><span>N/A:</span></button>
-                    </td>
                 </tr>
                 <tr>
                     <td>
                         <span>Full House:</span>
-                    </td>
-                    <td>
-                        <button><span>N/A:</span></button>
-                    </td>
-                    <td>
-                        <button><span>N/A:</span></button>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <span>Small Straight:</span>
                     </td>
-                    <td>
-                        <button><span>N/A:</span></button>
-                    </td>
-                    <td>
-                        <button><span>N/A:</span></button>
-                    </td>
                 </tr>
                 <tr>
                     <td>
-                        <span>Chance:</span>
-                    </td>
-                    <td>
-                        <button><span>N/A:</span></button>
-                    </td>
-                    <td>
-                        <button><span>N/A:</span></button>
+                        <span>High Straight:</span>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <span>Yahtzee:</span>
                     </td>
+                </tr>
+                <tr>
                     <td>
-                        <button><span>N/A:</span></button>
+                        <span>Chance:</span>
                     </td>
+                </tr>
+                <tr class="separating_line">
                     <td>
-                        <button><span>N/A:</span></button>
+                        <span>Bottom half:</span>
+                    </td>
+                </tr>
+                <tr class="separating_line">
+                    <td>
+                        <span>Total:</span>
                     </td>
                 </tr>
             </tbody>
@@ -194,12 +131,12 @@
 
         <div id="right_container">
             <div id="dice_container">
-                <img id="dice1" class="dice" src="./images/dice_1.png">
+                <img id="dice1" class="dice kept" src="./images/dice_1.png">
                 <img id="dice2" class="dice" src="./images/dice_1.png">
                 <img id="dice3" class="dice" src="./images/dice_1.png">
                 <img id="dice4" class="dice" src="./images/dice_1.png">
                 <img id="dice5" class="dice" src="./images/dice_1.png">
-            </div>
+            </div><br><br>
             <button id="roll_button" class="main-button"> Roll Dice </button>
         </div>
     </div>
@@ -245,6 +182,7 @@
     <script src="./scripts/dice.js" type="module"></script>
 </section>-->
 <script src="./scripts/game.js" type="module"></script>
+</div>
 </body>
 
 </html>
