@@ -17,6 +17,7 @@
     <meta charset="utf-8">
     <title>Yahtzee Game</title>
     <link rel="stylesheet" href="styles/game.css">
+    <script src="./scripts/game.js" type="module"></script>
 </head>
 
 <body>
@@ -131,11 +132,11 @@
 
         <div id="right_container">
             <div id="dice_container">
-                <img id="dice1" class="dice kept" src="./images/dice_1.png">
-                <img id="dice2" class="dice" src="./images/dice_1.png">
-                <img id="dice3" class="dice" src="./images/dice_1.png">
-                <img id="dice4" class="dice" src="./images/dice_1.png">
-                <img id="dice5" class="dice" src="./images/dice_1.png">
+                <button id="dice1button" class="dice_button"><img id="dice1" class="dice" src="./images/dice_1.png"></button>
+                <button id="dice2button" class="dice_button"><img id="dice2" class="dice" src="./images/dice_1.png"></button>
+                <button id="dice3button" class="dice_button"><img id="dice3" class="dice" src="./images/dice_1.png"></button>
+                <button id="dice4button" class="dice_button"><img id="dice4" class="dice" src="./images/dice_1.png"></button>
+                <button id="dice5button" class="dice_button"><img id="dice5" class="dice" src="./images/dice_1.png"></button>
             </div><br><br>
             <button id="roll_button" class="main-button"> Roll Dice </button>
         </div>
@@ -181,7 +182,6 @@
   </div>
     <script src="./scripts/dice.js" type="module"></script>
 </section>-->
-<script src="./scripts/game.js" type="module"></script>
 </div>
 </body>
 

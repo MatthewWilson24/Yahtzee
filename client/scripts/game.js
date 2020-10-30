@@ -62,15 +62,17 @@ const postMove = async (move) => {
 }
 
 const receiveGameState = async (code) => {
-    return await apiMessageSender.post('/game_state', {
+    const state = await apiMessageSender.post('/game_state', {
         game: code,
     })
+
+    return state
 }
 
-const initializeTable = (code, thisPlayer) => {
+const initializeTable = async (code, thisPlayer) => {
     console.log('Initializing table')
-    // const gameState = await receiveGameState(code)
-    const gameState = generateTestGame()
+    const gameState = await receiveGameState(code)
+    // const gameState = generateTestGame()
     for (const player of gameState.players) {
         ;[...document.getElementsByTagName('tr')].forEach((row, i) => {
             const span = document.createElement('span')
@@ -99,36 +101,103 @@ const initializeTable = (code, thisPlayer) => {
     }
 }
 
-const pollGameState = (code, player) => {
+const pollGameState = async (code, player) => {
     console.log('Polling game state')
     setTimeout(async () => {
-        // const gameState = await receiveGameState(code)
-        const gameState = generateTestGame()
+        const gameState = await receiveGameState(code)
+        // const gameState = generateTestGame()
+        if (updateKeptDice) {
+            postMove({
+                game: code,
+                player: player,
+                keep: diceToKeep,
+                roll: false,
+                score: null,
+            })
+
+            updateKeptDice = false
+        }
         updatePageWithNewState(gameState, player)
         pollGameState(code, player)
     }, 500)
 }
 
+let diceToKeep = []
+let updateKeptDice = false
+
+const toggleDice = (diceIndex) => {
+    console.log(`Toggle dice${diceIndex}`)
+    if (diceToKeep.includes(diceIndex)) {
+        diceToKeep = diceToKeep.filter((val) => val !== diceIndex)
+    } else {
+        diceToKeep.push(diceIndex)
+    }
+    updateKeptDice = true
+}
+
 window.onload = () => {
     const { name: player, game: code } = getPageQueryParameters()
+    const buttons = document.getElementsByClassName('dice_button')
+
     initializeTable(code, player)
     pollGameState(code, player)
 }
 
-const updateScorecards = (scorecards, players) => {
+const updateScorecards = (
+    scorecards,
+    players,
+    currentPlayer,
+    currentTurn,
+    canScore
+) => {
     for (const player of players) {
         for (const category of orderedCategories) {
-            let cellValue = (scorecards[player][category] ?? '-').toString()
-            document.getElementsByClassName(
+            const cellValue = (scorecards[player][category] ?? '-').toString()
+            const element = document.getElementsByClassName(
                 `player-${player} ${category}`
-            )[0].textContent = cellValue
+            )[0]
+            element.textContent = cellValue
+            element.disabled =
+                currentPlayer !== player ||
+                currentPlayer !== currentTurn ||
+                computedCategories.includes(category)
         }
     }
 }
 
-const updateDice = (dice) => {}
-
-const updatePageWithNewState = (state) => {
-    updateScorecards(state.scorecards, state.players)
-    updateDice()
+const updateDice = (dice, diceKept) => {
+    for (let i = 0; i < 5; i++) {
+        const die = document.getElementById(`dice${i + 1}`)
+        die.src = `./images/dice_${dice[i]}.png`
+        if (diceKept.includes(i)) {
+            document.getElementById(`dice${i + 1}button`).classList.add('kept')
+        } else {
+            document
+                .getElementById(`dice${i + 1}button`)
+                .classList.remove('kept')
+        }
+    }
 }
+
+const updatePageWithNewState = (state, player) => {
+    updateScorecards(
+        state.scorecards,
+        state.players,
+        player,
+        state.currentPlayer
+    )
+    updateDice(state.currentDice, state.diceKept)
+}
+
+/*
+    - Make the dice buttons
+    - Have an array containing a list of clicked dice
+    - When you click, you add to the array; when you click again, you remove
+    - When the player clicks "roll", we should post {
+        roll: true,
+        diceKept: [ ... ]
+    } to /move endpoint by calling postMove()
+
+*/
+
+// const DiceButton = (diceValue) => {}
