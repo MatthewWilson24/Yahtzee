@@ -38,13 +38,20 @@ export const moveEndpoint = (req, res) => {
         return
     }
 
-    // Return 400 if the move is not exactly one of rolling and scoring
-    if ((req.roll && req.score) || (!req.roll && !req.score)) {
+    // Return 400 if the move is both of rolling and scoring
+    if (req.roll && req.score) {
         res.sendStatus(400)
         return
     }
 
-    if (req.roll) {
+    if (!req.roll && !req.score) {
+        // Return 400 if trying to mark dice to keep when no rolls are left
+        if (!currGame.canRoll()) {
+            res.sendStatus(400)
+            return
+        }
+        currGame.keepDice(req.keep)
+    } else if (req.roll) {
         // Return 400 if trying to roll when no rolls are left
         if (!currGame.canRoll()) {
             res.sendStatus(400)

@@ -2,7 +2,6 @@
 
 A multiplayer Yahtzee web app.
 
-
 ## How to continue working on Yahtzee
 
 1. Fork the repository (click the "fork" button in the top-left of the repository main page on Github)
@@ -12,7 +11,6 @@ A multiplayer Yahtzee web app.
 3. In your local repository, run: `git remote set-url origin <url-of-your-cloned-repo>`
 
 4. You can now push & pull to your own version of the code.
-
 
 ## How to live deploy your own version of Yahtzee
 
